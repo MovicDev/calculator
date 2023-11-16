@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    
+</head>
+<body>
+       
+    <div class="mx-auto w-25 mt-7 bg-secondary p-3" style=" box-shadow: 0 0 5px gray;">
+        <div id="screen" style="height: 50px; border: 1px solid gray; background-color: aquamarine; font-size: 20px;" class="rounded-0 ps-2 pt-1"></div>
+   
+        <div class="row p-1">
+           <button class="btn btn-light col border-0 rounded-0 m-1 text-center text-dark" id="operator"  onclick="logical(log)">log</button>
+           <button class="btn btn-light col border-0 rounded-0  m-1 text-center text-dark" id="operator"  onclick="displayText('**')">^</button>
+           <button class="btn btn-light col border-0 rounded-0  m-1 text-center text-dark" id="operator" onclick="square(2)">x2</button>
+           <button class="btn btn-dark col border-0 rounded-0 m-1 text-center text-light" id="operator"  onclick="percent('%')">%</button>
+        
+           </div>
+   
+   <div class="row p-1">
+   <button class="btn btn-dark col border-0 rounded-0  m-1 text-center text-light" id="number7" onclick="displayText (7)">7</button>
+   <button class="btn btn-dark col border-0 rounded-0 m-1 text-center text-light" id="number8" onclick="displayText (8)">8</button>
+   <button class="btn btn-dark col border-0 rounded-0 m-1 text-center text-light" id="number9" onclick="displayText (9)">9</button>
+   <button class="btn btn-dark col border-0 rounded-0 m-1 text-center text-light" id="operator"  onclick="displayText('/')">/</button>
+   </div>
+   
+   
+   <div class="row p-1">
+       <button class="btn btn-dark col border-0 rounded-0  m-1 text-center text-light" id="number4" onclick="displayText (4)">4</button>
+       <button class="btn btn-dark col border-0 rounded-0  m-1 text-center text-light" id="number5" onclick="displayText (5)">5</button>
+       <button class="btn btn-dark col border-0 rounded-0 m-1 text-center text-light" id="number6" onclick="displayText (6)">6</button>
+       <button class="btn btn-dark col border-0 rounded-0 m-1 text-center text-light" id="operator"  onclick="displayText('*')">X</button>
+       </div>
+   
+   <div class="row p-1">
+       <button class="btn btn-dark col border-0 rounded-0  m-1 text-center text-light" id="number1" onclick="displayText (1)">1</button>
+       <button class="btn btn-dark col border-0 rounded-0  m-1 text-center text-light" id="number2" onclick="displayText (2)">2</button>
+       <button class="btn btn-dark col border-0 rounded-0  m-1 text-center text-light" id="number3" onclick="displayText (3)">3</button>
+       <button class="btn btn-dark col border-0 rounded-0 m-1 text-center text-light" id="operator"  onclick="displayText('-')">-</button>
+       </div>
+   
+   <div class="row p-1">
+       <button class="btn btn-dark col border-0 rounded-0 m-1 text-center text-light" id="number9" onclick="displayText (0)">0</button>
+       <button class="btn btn-dark col border-0 rounded-0 m-1 text-center text-light" id="operator" onclick="displayText ('.')">.</button>
+       <button class="btn btn-dark col border-0 rounded-0 m-1 text-center text-light" id="operator" onclick="calculate()">=</button>
+       <button class="btn btn-dark col border-0 rounded-0 m-1 text-center text-light" id="operator" onclick="displayText('+')">+</button>
+       </div>
+   
+   <div class="row p-1">
+    <button class="btn btn-danger col border-0  rounded-0 m-1 text-center text-light" onclick="ac()">ON</button>
+   <button class="btn btn-danger col border-0  rounded-0 m-1 text-center text-light" onclick="clearText()">OFF</button>
+   <button class="btn btn-warning col border-0 rounded-0  m-1 text-center text-dack" onclick="backspaceText()">Backspace</button>
+   </div>
+   <div class="text-light text-center" style="font-size: 10px; position: relative; top: 10px;">MovicDev Calculator</div>
+   </div>
+     
+           <script>
+               function displayText(text){
+                   document.getElementById('screen').innerHTML += text;
+               }
+               function clearText(){
+                   document.getElementById('screen').innerHTML = "";
+               }
+               function ac(){
+                 document.getElementById('screen').innerHTML = 0;
+                
+               }
+   
+               function backspaceText(){
+                   let text = document.getElementById('screen').innerHTML
+                   newText = text.slice (0,-1)
+                   document.getElementById('screen').innerHTML = newText;
+               }
+               function calculate(){
+                   let text = document.getElementById('screen').innerHTML = eval(document.getElementById('screen').innerHTML);
+                 
+                   
+                  
+               }
+                 function percent(){
+                   let text = document.getElementById('screen').innerHTML = eval(document.getElementById('screen').innerHTML) /100;               
+               }
+         
+               function square(){
+                   let text = document.getElementById('screen').innerHTML = eval(document.getElementById('screen').innerHTML) * document.getElementById('screen').innerHTML ;               
+               }
+               
+               function logical(log){
+                   let text = document.getElementById('screen').innerHTML = eval(document.getElementById('screen').innerHTML) %10 ;               
+               }
+         
+         
+              
+               if ( function displayText(text){
+                   document.getElementById('screen').innerHTML += text; 
+               }
+                   )
+               
+              function ac(){
+                 document.getElementById('screen').innerHTML = 0;
+                 let text = document.getElementById('screen').innerHTML
+                cText = text.slice (-1)
+               document.getElementsById('screen').innerHTML = cText;
+
+
+               }
+              
+           
+         
+                 
+
+            
+               
+           
+               </script>
+</body>
+</html>
