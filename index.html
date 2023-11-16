@@ -50,9 +50,8 @@
        </div>
    
    <div class="row p-1">
-    <button class="btn btn-danger col border-0  rounded-0 m-1 text-center text-light" onclick="ac()">ON</button>
    <button class="btn btn-danger col border-0  rounded-0 m-1 text-center text-light" onclick="clearText()">OFF</button>
-   <button class="btn btn-warning col border-0 rounded-0  m-1 text-center text-dack" onclick="backspaceText()">Backspace</button>
+   <button class="btn btn-warning col border-0 rounded-0  m-1 text-center text-dack" onclick="backspaceText()">Del</button>
    </div>
    <div class="text-light text-center" style="font-size: 10px; position: relative; top: 10px;">MovicDev Calculator</div>
    </div>
@@ -93,21 +92,9 @@
                }
          
          
-              
-               if ( function displayText(text){
-                   document.getElementById('screen').innerHTML += text; 
-               }
-                   )
+        
                
-              function ac(){
-                 document.getElementById('screen').innerHTML = 0;
-                 let text = document.getElementById('screen').innerHTML
-                cText = text.slice (-1)
-               document.getElementsById('screen').innerHTML = cText;
-
-
-               }
-              
+           
            
          
                  
